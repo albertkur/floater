@@ -25,8 +25,8 @@ class HomePage extends StatefulWidgetBase<HomePageState> {
             backgroundColor: Colors.blue,
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.school),
-            label: 'Pink',
+            icon: Icon(Icons.camera),
+            label: 'Camera',
             backgroundColor: Colors.pink,
             // backgroundColor:
           ),
@@ -55,7 +55,7 @@ class HomePage extends StatefulWidgetBase<HomePageState> {
           // NavigationService.instance.generateRoute(Routes.home, {"tab": 2}),
           "/home",
           key: this.state.nav2Key,
-          initialRoute: Routes.todos,
+          initialRoute: Routes.camera,
         ),
       ],
     );

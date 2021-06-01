@@ -1,3 +1,4 @@
+import 'package:example/pages/camera/camera_page.dart';
 import 'package:example/pages/home/home_page.dart';
 import 'package:example/pages/manage_todo/manage_todo_description/manage_todo_description_page.dart';
 import 'package:example/pages/manage_todo/manage_todo_page.dart';
@@ -18,6 +19,8 @@ abstract class Routes {
 
   static const viewTodo = "$home/viewTodo?{id: string}";
 
+  static const camera = "$home/camera";
+
   // Call this function in main.dart to register all the app pages
   // and bootstrap the navigation
   static void initializeNavigation() {
@@ -30,14 +33,11 @@ abstract class Routes {
     // Home Tab Pages
     NavigationManager.instance
       ..registerPage(Routes.todos, (routeArgs) => TodosPage())
-      ..registerPage(
-          Routes.manageTodo, (routeArgs) => ManageTodoPage(routeArgs["id"]))
-      ..registerPage(
-          Routes.manageTodoTitle, (routeArgs) => ManageTodoTitlePage())
-      ..registerPage(Routes.manageTodoDescription,
-          (routeArgs) => ManageTodoDescriptionPage())
-      ..registerPage(
-          Routes.viewTodo, (routeArgs) => ViewTodoPage(routeArgs["id"]));
+      ..registerPage(Routes.manageTodo, (routeArgs) => ManageTodoPage(routeArgs["id"]))
+      ..registerPage(Routes.manageTodoTitle, (routeArgs) => ManageTodoTitlePage())
+      ..registerPage(Routes.manageTodoDescription, (routeArgs) => ManageTodoDescriptionPage())
+      ..registerPage(Routes.viewTodo, (routeArgs) => ViewTodoPage(routeArgs["id"]))
+      ..registerPage(Routes.camera, (routeArgs) => CameraPage());
 
     // bootstrapping Navigation
     NavigationManager.instance.bootstrap();

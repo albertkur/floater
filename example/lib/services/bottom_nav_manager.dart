@@ -6,7 +6,7 @@ class BottomNavManager {
   final GlobalKey<ScopedNavigatorState> nav1Key = GlobalKey();
   final GlobalKey<ScopedNavigatorState> nav2Key = GlobalKey();
 
-  int _currentSelectedNavItem = 0;
+  int _currentSelectedNavItem = 2;
   int get currentSelectedNavItem => this._currentSelectedNavItem;
 
   GlobalKey<ScopedNavigatorState>? currentNav;
