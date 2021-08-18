@@ -42,7 +42,7 @@ class HomePage extends StatefulWidgetBase<HomePageState> {
         ScopedNavigator(
           // NavigationService.instance.generateRoute(Routes.home, {"tab": 0}),
           "/home",
-          initialRoute: Routes.todos,
+          initialRoute: Routes.imageExifExtract,
           key: this.state.nav0Key,
         ),
         ScopedNavigator(

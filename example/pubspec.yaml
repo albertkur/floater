@@ -25,6 +25,12 @@ dependencies:
     sdk: flutter
   floater:
     path: ../
+  image_picker: ^0.8.3+2
+  exif: ^3.0.0
+  permission_handler: ^6.1.1
+  image_cropper: ^1.4.0
+  # image: ^3.0.2
+
 
 
   # The following adds the Cupertino Icons font to your application.
