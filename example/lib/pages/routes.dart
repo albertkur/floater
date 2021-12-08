@@ -1,4 +1,5 @@
 import 'package:example/pages/full_screen_image/full_screen_image_page.dart';
+import 'package:example/pages/full_screen_video/full_screen_video_page.dart';
 import 'package:example/pages/home/home_page.dart';
 import 'package:example/pages/image_list/image_list_page.dart';
 import 'package:example/pages/manage_todo/manage_todo_description/manage_todo_description_page.dart';
@@ -20,6 +21,7 @@ abstract class Routes {
 
   static const listPage = "$home/listPage";
   static const fullScreenImage = "$home/fullScreenImage";
+  static const fullScreenVideo = "$home/fullScreenVideo?{controller: object}";
 
   static const viewTodo = "$home/viewTodo?{id: string}";
 
@@ -42,7 +44,9 @@ abstract class Routes {
 
     NavigationManager.instance
       ..registerPage(Routes.listPage, (routeArgs) => ImageListPage(), fullscreenDialog: true)
-      ..registerPage(Routes.fullScreenImage, (routeArgs) => FullScreenImagePage(), fullscreenDialog: true);
+      ..registerPage(Routes.fullScreenImage, (routeArgs) => FullScreenImagePage(), fullscreenDialog: true)
+      ..registerPage(Routes.fullScreenVideo, (routeArgs) => FullScreenVideoPage(routeArgs["controller"]),
+          fullscreenDialog: true);
 
     // bootstrapping Navigation
     NavigationManager.instance.bootstrap();
