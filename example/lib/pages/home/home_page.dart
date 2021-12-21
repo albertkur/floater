@@ -42,8 +42,11 @@ class HomePage extends StatefulWidgetBase<HomePageState> {
         ScopedNavigator(
           // NavigationService.instance.generateRoute(Routes.home, {"tab": 0}),
           "/home",
-          initialRoute: Routes.todos,
+          initialRoute: Routes.listPage,
           key: this.state.nav0Key,
+          observers: [
+            HeroController(), // TODO: IMPORTANT
+          ],
         ),
         ScopedNavigator(
           // NavigationService.instance.generateRoute(Routes.home, {"tab": 1}),
