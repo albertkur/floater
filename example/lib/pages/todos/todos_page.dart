@@ -16,35 +16,18 @@ class TodosPage extends StatefulWidgetBase<TodosPageState> {
     return OverlayLoadingSpinner(
       isEnabled: this.state.isTogglingTodoCompletion,
       child: Scaffold(
-        appBar: AppBar(
-          centerTitle: true,
-          title: Text("Todos"),
-          backgroundColor: this.state.appBarColor,
-        ),
-        floatingActionButton: FloatingActionButton(
-          onPressed: this.state.onAddTodoPressed,
-          child: Icon(Icons.add),
-        ),
+        appBar: AppBar(centerTitle: true, title: Text("Todos"), backgroundColor: this.state.appBarColor),
+        floatingActionButton: FloatingActionButton(onPressed: this.state.onAddTodoPressed, child: Icon(Icons.add)),
         body: this._buildBody(context),
       ),
     );
   }
 
   Widget _buildBody(BuildContext context) {
-    if (this.state.isLoading)
-      return Container(
-        child: Center(
-          child: LoadingSpinner(),
-        ),
-      );
+    if (this.state.isLoading) return Container(child: Center(child: LoadingSpinner()));
 
     if (this.state.todos.isEmpty)
-      return Container(
-        child: Text(
-          "No todos added yet :(",
-          style: Theme.of(context).textTheme.bodyText1,
-        ),
-      );
+      return Container(child: Text("No todos added yet :(", style: Theme.of(context).textTheme.bodyMedium));
 
     return ListView.builder(
       addAutomaticKeepAlives: true,

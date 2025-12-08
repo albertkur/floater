@@ -10,18 +10,9 @@ class SplashPage extends StatefulWidgetBase<SplashPageState> {
       body: SafeArea(
         child: Column(
           children: <Widget>[
-            Expanded(
-              child: Center(
-                child: FlutterLogo(
-                  size: 200,
-                ),
-              ),
-            ),
-            Text(
-              "Floater Example",
-              style: Theme.of(context).textTheme.headline6,
-            ),
-            SizedBox(height: 16)
+            Expanded(child: Center(child: FlutterLogo(size: 200))),
+            Text("Floater Example", style: Theme.of(context).textTheme.headlineSmall),
+            SizedBox(height: 16),
           ],
         ),
       ),

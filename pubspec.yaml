@@ -4,16 +4,17 @@ version: 0.1.5+1
 homepage: https://github.com/shreymahendru/floater
 
 environment:
-  sdk: '>=2.12.0 <3.0.0'
+  sdk: ">=3.10.1 <4.0.0"
+  flutter: ">=3.38.0 <4.0.0" 
 
 dependencies:
   flutter:
     sdk: flutter
   
-  meta: ^1.7.0
-  get_it: ^7.2.0
-  flutter_secure_storage: ^5.0.2
-  rxdart: ^0.27.3
+  meta: ^1.17.0
+  get_it: ^9.2.0
+  flutter_secure_storage: ^9.2.4
+  rxdart: ^0.28.0
   shared_preferences: ^2.0.15
   
 dev_dependencies:
